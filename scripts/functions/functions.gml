@@ -4,12 +4,7 @@
 // nvm i fixed it 👆
 
 function itemMerger(){
-	combos =
-	[
-	    ["ob_blue", "ob_five", ob_zzz],
-	    ["ob_zzz", "ob_zzz", ob_five],
-	    ["ob_five", "ob_zzz", ob_blue]
-	];
+	combos = ob_control.combos;
 	// need this so i can actually delete the two closest instances
 	var objects_index = ob_click.objects;
 	indexToObject()
@@ -22,7 +17,8 @@ function itemMerger(){
 	for (var i=0; i<array_length(combos); i+=1){
 			if (combos[i][0] = ds_list_find_value(objects, 0) and combos[i][1] = ds_list_find_value(objects, 1)){
 				show_debug_message("combo works");
-				instance_create_layer(selected_item.x, selected_item.y, "Instances", combos[i][2]);
+				var result = asset_get_index(array_get(combos[i], 2));
+				instance_create_layer(selected_item.x, selected_item.y, "Instances", result);
 				// dear god this thing too
 				// technically i only need it to delete two things. but well. i lazy
 				for (var e=0;e<2;e+=1){
@@ -30,6 +26,12 @@ function itemMerger(){
 					var object = asset_get_index(ds_list_find_value(objects_index, e));
 					instance_destroy(instance_nearest(mouse_x, mouse_y,object));
 				}
+				// for unlocking functionality
+				if (combos[i][3] = false){
+				combos[i][3] = true;
+				show_debug_message(combos[i][2] + " is now unlocked.")
+				}
+				else{show_debug_message(combos[i][2] + " is already known.")}
 			}
 	}
 	// for good measure

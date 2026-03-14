@@ -17,7 +17,24 @@ if selected_item = noone and mouse_check_button_pressed(mb_left) and instance_ex
 // then if it collides, calls merge
 if selected_item != noone and mouse_check_button_released(mb_left) {
 	
-	if collision_rectangle_list(hoverable.x -0, hoverable.y - 0, hoverable.x + hoverable.sprite_width, hoverable.y + hoverable.sprite_height, ob_selectable, false, false, objects, false)
+	selected_object = object_get_name(selected_item.object_index);
+	show_debug_message("selected item: " + selected_object);
+	selected_object =  asset_get_index(selected_object);
+	// have to check with customer first for some reason idk
+	// otherwise it just doesnt work
+	// do u like my debug messages
+	if collision_rectangle_list(selected_item.x, selected_item.y, selected_item.x + selected_item.sprite_width, selected_item.y + selected_item.sprite_height, ob_customer, false, false, customer, false){
+			show_debug_message("collided with customer");
+			var food = asset_get_index(ob_customer.food_wanted);
+			if (selected_object = food){show_debug_message("yay thank you");}
+			else{show_debug_message("not what i wanted");}
+			instance_destroy(selected_item);
+			ob_customer.food_wanted = noone;
+		}
+	// originally used instance_position_list, but i needed it to be within a defined area instead at a point
+	// did you know the order of this matters? i didnt
+	// put instance_exists after collision_rectangle_list and it gave me an error
+	if (instance_exists(selected_item) and collision_rectangle_list(selected_item.x, selected_item.y, selected_item.x + selected_item.sprite_width, selected_item.y + selected_item.sprite_height, ob_selectable, false, false, objects, false))
 		{
 			for (var i = 0; i < ds_list_size(objects); i++)
 			{
@@ -30,14 +47,15 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 				}
 			}
 		}
+	ds_list_clear(customer);
 	ds_list_clear(objects);
 	selected_item = noone;
 }
 
 // centers the selection
 if selected_item != noone and instance_exists(selected_item){
-	selected_item.x = mouse_x - hoverable.sprite_width/2;
-	selected_item.y = mouse_y - hoverable.sprite_height/2;
+	selected_item.x = mouse_x - selected_item.sprite_width/2;
+	selected_item.y = mouse_y - selected_item.sprite_height/2;
 }
 
 // if right click, erase that thang
