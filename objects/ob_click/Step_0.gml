@@ -1,7 +1,7 @@
 /// @description girl like everything
 
 // i forgot why i wrote this code i just remember it works
-var hoverable = instance_nearest(mouse_x, mouse_y, ob_selectable);
+var hoverable = instance_nearest(mouse_x, mouse_y, select);
 
 // makes it easier to read
 if (instance_exists(selected_item)){
@@ -30,15 +30,20 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 	// do u like my debug messages 🥺
 	if collision_rectangle_list(selx, sely, selx + selected_item.sprite_width, sely + selected_item.sprite_height, customer, false, false, customer_list, false){
 			show_debug_message("collided with customer");
-			var food = asset_get_index(customer.food_wanted);
-			if (selected_object = food){
-				customer.mood = 2;
-				customer.image_index = 2;
+			if (customer.clickable){
+				var food = asset_get_index(customer.food_wanted);
+				if (selected_object = food){
+					control.rating += 0.25;
+					customer.mood = 2;
+					customer.image_index = 2;
+				}
+				else{
+					control.rating -= 0.5;
+					customer.mood = 1;
+					customer.image_index = 1;
+				}
 			}
-			else{
-				customer.mood = 1;
-				customer.image_index = 1;
-			}
+			customer.clickable = false;
 			instance_destroy(selected_item);
 			customer.food_wanted = noone;
 			customer.alarm[0] = 120;

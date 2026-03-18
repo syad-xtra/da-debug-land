@@ -1,5 +1,6 @@
 /// @description set up
 
+control = ob_control;
 select = ob_selectable;
 customer = ob_customer;
 selected_item = noone;

@@ -1,4 +1,4 @@
-while (food_wanted = noone){
+while (food_wanted = noone and clickable){
 	food_pos = random(array_length(food_list));
 	show_debug_message(food_pos);
 	if (food_list[food_pos][0][3]){

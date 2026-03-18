@@ -1,3 +1,6 @@
+rating = 3;
+clamp(rating, 0, 5);
+
 // ZZZ
 combo[0][0][0] = "ob_zzz" // object name
 combo[0][0][1] = "ZZZ" // name
