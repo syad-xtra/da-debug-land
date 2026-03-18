@@ -4,7 +4,7 @@
 // nvm i fixed it 👆
 
 function itemMerger(){
-	combos = ob_control.combos;
+	combo = ob_control.combo;
 	// need this so i can actually delete the two closest instances
 	var objects_index = ob_click.objects;
 	indexToObject()
@@ -14,24 +14,27 @@ function itemMerger(){
 	// dear god this thing. it reads through the combos then looks for a matching set of combos
 	// does nothing if it finds nothing
 	// technology!
-	for (var i=0; i<array_length(combos); i+=1){
-			if (combos[i][0] = ds_list_find_value(objects, 0) and combos[i][1] = ds_list_find_value(objects, 1)){
-				show_debug_message("combo works");
-				var result = asset_get_index(array_get(combos[i], 2));
-				instance_create_layer(selected_item.x, selected_item.y, "Instances", result);
-				// dear god this thing too
-				// technically i only need it to delete two things. but well. i lazy
-				for (var e=0;e<2;e+=1){
-					// youre not gonna catch me write this out 👇 again
-					var object = asset_get_index(ds_list_find_value(objects_index, e));
-					instance_destroy(instance_nearest(mouse_x, mouse_y,object));
+	for (var i=0; i<array_length(combo); i += 1){
+			for (var e=1; e<array_length(combo[i]); e += 1){
+				if (combo[i][e][0] = ds_list_find_value(objects, 0) and combo[i][e][1] = ds_list_find_value(objects, 1)){
+					show_debug_message("combo works");
+					var result = asset_get_index(combo[i][0][0]);
+					instance_create_layer(selected_item.x, selected_item.y, "Instances", result);
+					// dear god this thing too
+					// technically i only need it to delete two things. but well. i lazy
+					// THREE FOR LOOPS BTW. IVE GONE MAD
+					for (var o=0;o<2;o+=1){
+						// youre not gonna catch me write this out 👇 again
+						var object = asset_get_index(ds_list_find_value(objects_index, o));
+						instance_destroy(instance_nearest(mouse_x, mouse_y,object));
+					}
+					// for unlocking functionality
+					if (combo[i][0][2] = false){
+					combo[i][0][2] = true;
+					show_debug_message(combo[i][0][1] + " is now unlocked.")
+					}
+					else{show_debug_message(combo[i][0][1] + " is already known.")}
 				}
-				// for unlocking functionality
-				if (combos[i][3] = false){
-				combos[i][3] = true;
-				show_debug_message(combos[i][2] + " is now unlocked.")
-				}
-				else{show_debug_message(combos[i][2] + " is already known.")}
 			}
 	}
 	// for good measure

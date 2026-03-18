@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if ob_control.combos[3][3]{
+if ob_control.combo[3][0][2]{
 		image_index = 1;
 		create = ob_kisko;
 	}
