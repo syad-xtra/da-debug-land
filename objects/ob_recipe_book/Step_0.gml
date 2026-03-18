@@ -1,0 +1,14 @@
+// i am not doing shaders. hell nah. this is way easier
+unlock_number = 0;
+for (var i = 0; i < array_length(combo); i++){
+	if (combo[i][0][2]){
+		unlock_number++;
+	}
+}
+alpha = unlock_number/array_length(combo);
+image_alpha = alpha;
+
+if position_meeting(mouse_x,mouse_y,self){
+	show_text = true;
+}
+else{show_text = false}
