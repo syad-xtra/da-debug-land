@@ -7,7 +7,7 @@ if (book.show_text){
 	height = height-book.sprite_height;
 	// i need to half it? for some reason?
 	// but it centers
-	draw_set_font(fnt_large);
+	draw_set_font(fnt_small);
 	draw_text(book.x-width/2,book.y-height/2,text);
 }
 
@@ -52,6 +52,7 @@ if instance_exists(select){
 				var width = string_width(text);
 				width = width-ingredient_list[i].sprite_width;
 				draw_set_font(fnt_small);
+				// apparently game maker can read instance refs. good to know
 				draw_text(ingredient_list[i].x-width/2, ingredient_list[i].y + ingredient_list[i].sprite_height, text);
 			}
 	}

@@ -12,9 +12,9 @@ var sely = selected_item.y;}
 // it defines a rectangular area that can be picked up
 // instead of yknow
 // clicking on screen and the closest instances gets yoinked to you
-if selected_item = noone and mouse_check_button_pressed(mb_left) and instance_exists(ob_selectable) and point_in_rectangle(mouse_x, mouse_y, hoverable.x -0, hoverable.y - 0, hoverable.x + hoverable.sprite_width, hoverable.y + hoverable.sprite_height){
+if selected_item = noone and mouse_check_button_pressed(mb_left) and instance_exists(select) and point_in_rectangle(mouse_x, mouse_y, hoverable.x -0, hoverable.y - 0, hoverable.x + hoverable.sprite_width, hoverable.y + hoverable.sprite_height){
 	// if i didnt do this game maker would pick up every instance of ob_selectable
-	selected_item = instance_nearest(mouse_x, mouse_y, ob_selectable);
+	selected_item = instance_nearest(mouse_x, mouse_y, select);
 	audio_play_sound(sn_select,1,0);
 }
 
@@ -28,25 +28,25 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 	// have to check with customer first for some reason idk
 	// otherwise it just doesnt work
 	// do u like my debug messages 🥺
-	if collision_rectangle_list(selx, sely, selx + selected_item.sprite_width, sely + selected_item.sprite_height, ob_customer, false, false, customer, false){
+	if collision_rectangle_list(selx, sely, selx + selected_item.sprite_width, sely + selected_item.sprite_height, customer, false, false, customer_list, false){
 			show_debug_message("collided with customer");
-			var food = asset_get_index(ob_customer.food_wanted);
+			var food = asset_get_index(customer.food_wanted);
 			if (selected_object = food){
-				ob_customer.mood = 2;
-				ob_customer.image_index = 2;
+				customer.mood = 2;
+				customer.image_index = 2;
 			}
 			else{
-				ob_customer.mood = 1;
-				ob_customer.image_index = 1;
+				customer.mood = 1;
+				customer.image_index = 1;
 			}
 			instance_destroy(selected_item);
-			ob_customer.food_wanted = noone;
-			ob_customer.alarm[0] = 120;
+			customer.food_wanted = noone;
+			customer.alarm[0] = 120;
 		}
 	// originally used instance_position_list, but i needed it to be within a defined area instead at a point
 	// did you know the order of this matters? i didnt
 	// put instance_exists after collision_rectangle_list and it gave me an error
-	if (instance_exists(selected_item) and collision_rectangle_list(selx, sely, selx + selected_item.sprite_width, sely + selected_item.sprite_height, ob_selectable, false, false, objects, false))
+	if (instance_exists(selected_item) and collision_rectangle_list(selx, sely, selx + selected_item.sprite_width, sely + selected_item.sprite_height, select, false, false, objects, false))
 		{
 			for (var i = 0; i < ds_list_size(objects); i++)
 			{
@@ -59,7 +59,7 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 				}
 			}
 		}
-	ds_list_clear(customer);
+	ds_list_clear(customer_list);
 	ds_list_clear(objects);
 	selected_item = noone;
 }
@@ -72,6 +72,6 @@ if (instance_exists(selected_item) and selected_item != noone){
 }
 
 // if right click, erase that thang
-if (instance_exists(ob_selectable) and mouse_check_button_pressed(mb_right) and point_in_rectangle(mouse_x, mouse_y, hoverable.x -36, hoverable.y - 36, hoverable.x + 36, hoverable.y + 36)){
+if (instance_exists(select) and mouse_check_button_pressed(mb_right) and point_in_rectangle(mouse_x, mouse_y, hoverable.x -36, hoverable.y - 36, hoverable.x + 36, hoverable.y + 36)){
 	instance_destroy(hoverable);
 }
