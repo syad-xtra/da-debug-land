@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "ob_recipe_text",
+  "name": "ob_text",
   "spriteId": null,
   "solid": false,
   "visible": true,

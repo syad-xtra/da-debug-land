@@ -6,4 +6,3 @@ while (food_wanted = noone){
 	}
 }
 food_wanted = string(food_wanted);
-show_debug_message("food wanted: " + food_list[food_pos][0][1]);

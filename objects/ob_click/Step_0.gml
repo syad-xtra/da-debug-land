@@ -32,11 +32,11 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 			show_debug_message("collided with customer");
 			var food = asset_get_index(ob_customer.food_wanted);
 			if (selected_object = food){
-				show_debug_message("yay thank you");
+				ob_customer.mood = 2;
 				ob_customer.image_index = 2;
 			}
 			else{
-				show_debug_message("not what i wanted");
+				ob_customer.mood = 1;
 				ob_customer.image_index = 1;
 			}
 			instance_destroy(selected_item);
