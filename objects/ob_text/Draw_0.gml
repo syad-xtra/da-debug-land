@@ -4,15 +4,14 @@ if (book.show_text){
 	var text = string(book.unlock_number) + "/" + string(array_length(combo));
 	var width = book.sprite_width/2;
 	var height = book.sprite_height/2;
-	draw_set_font(fnt_small);
-	
+	smallCenteredText();
 	draw_text(book.x + width, book.y + height, text);
 }
 
 if customer.food_wanted != noone{
 	var text = "I want " + customer.food_list[customer.food_pos][0][1];
 	var width = customer.sprite_width/2;
-	draw_set_font(fnt_small);
+	smallCenteredText();
 	draw_text(customer.x + width, customer.y - offset, text);
 }
 
@@ -34,7 +33,7 @@ if customer.mood != 0{
 	}
 	var width = string_width(chosen);
 	var width = customer.sprite_width/2;
-	draw_set_font(fnt_small);
+	smallCenteredText();
 	draw_text(customer.x + width, customer.y - offset, chosen);
 }
 
@@ -48,7 +47,7 @@ if instance_exists(select){
 			if (combo[e][0][0] = ingredient_name){
 				var text = combo[e][0][1];
 				width = ingredient_list[i].sprite_width/2;
-				draw_set_font(fnt_small);
+				smallCenteredText();
 				// apparently game maker can read instance refs. good to know
 				draw_text(ingredient_list[i].x + width, ingredient_list[i].y + ingredient_list[i].sprite_height, text);
 			}

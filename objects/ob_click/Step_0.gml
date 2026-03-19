@@ -43,6 +43,7 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 					customer.image_index = 1;
 				}
 			}
+			control.rating = clamp(control.rating, 0, 5);
 			customer.clickable = false;
 			instance_destroy(selected_item);
 			customer.food_wanted = noone;
