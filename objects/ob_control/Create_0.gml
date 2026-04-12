@@ -1,40 +1,65 @@
 rating = 3;
 
-// ZZZ
-combo[0][0][0] = "ob_zzz" // object name
-combo[0][0][1] = "ZZZ" // name
-combo[0][0][2] = false // unlock status
-combo[0][0][3] = true // request status
+// BLOOD
+combo[0][0][0] = "ob_blood" // object name
+combo[0][0][1] = "Blood" // name
+combo[0][0][2] = true // unlock status
+combo[0][0][3] = false // request status
 
-combo[0][1][0] = "ob_blue"
-combo[0][1][1] = "ob_five"
+// BILE
+combo[1][0][0] = "ob_bile"
+combo[1][0][1] = "Bile"
+combo[1][0][2] = true
+combo[1][0][3] = false
 
-// FIVE
-combo[1][0][0] = "ob_five"
-combo[1][0][1] = "Five"
-combo[1][0][2] = false
-combo[1][0][3] = true
-
-combo[1][1][0] = "ob_zzz"
-combo[1][1][1] = "ob_zzz"
-
-combo[1][2][0] = "ob_kisko"
-combo[1][2][1] = "ob_zzz"
-
-// BLUE
-combo[2][0][0] = "ob_blue"
-combo[2][0][1] = "Blue"
-combo[2][0][2] = false
+// BRAIN
+combo[2][0][0] = "ob_brain"
+combo[2][0][1] = "Brain"
+combo[2][0][2] = true
 combo[2][0][3] = false
 
-combo[2][1][0] = "ob_five"
-combo[2][1][1] = "ob_zzz"
+// EYEBALL
+combo[3][0][0] = "ob_eye"
+combo[3][0][1] = "Eyeball"
+combo[3][0][2] = true
+combo[3][0][3] = false
 
-// KISKO
-combo[3][0][0] = "ob_kisko"
-combo[3][0][1] = "Kisko"
-combo[3][0][2] = false
-combo[3][0][3] = true
+// SEWER ALGAE
+combo[4][0][0] = "ob_sw_alg"
+combo[4][0][1] = "Sewer Algae"
+combo[4][0][2] = true
+combo[4][0][3] = false
 
-combo[3][1][0] = "ob_blue"
-combo[3][1][1] = "ob_zzz"
+// MUSHROOM
+combo[5][0][0] = "ob_shroom"
+combo[5][0][1] = "Mushroom"
+combo[5][0][2] = true
+combo[5][0][3] = false
+
+// BLOOD SAUCE
+combo[6][0][0] = "ob_bld_sc"
+combo[6][0][1] = "Blood Sauce"
+combo[6][0][2] = false
+combo[6][0][3] = true
+
+combo[6][1][0] = "ob_bile"
+combo[6][1][1] = "ob_blood"
+
+
+// CONGEALED BLOOD
+combo[7][0][0] = "ob_con_bld"
+combo[7][0][1] = "Congealed Blood"
+combo[7][0][2] = false
+combo[7][0][3] = true
+
+combo[7][1][0] = "ob_blood"
+combo[7][1][1] = "ob_blood"
+
+// CLOT SOUP
+combo[8][0][0] = "ob_clt_sp"
+combo[8][0][1] = "Clot Soup"
+combo[8][0][2] = false
+combo[8][0][3] = true
+
+combo[8][1][0] = "ob_con_bld"
+combo[8][1][1] = "ob_sw_alg"

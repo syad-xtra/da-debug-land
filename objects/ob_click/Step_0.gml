@@ -65,8 +65,12 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 				}
 			}
 		}
+	if (instance_exists(selected_item) and !collision_rectangle_list(selx, sely, selx + selected_item.sprite_width, sely + selected_item.sprite_height, mix_area, false, false, mix_area_list, false)){
+		instance_destroy(selected_item);
+	}
 	ds_list_clear(customer_list);
 	ds_list_clear(objects);
+	ds_list_clear(mix_area_list);
 	selected_item = noone;
 }
 
@@ -78,6 +82,6 @@ if (instance_exists(selected_item) and selected_item != noone){
 }
 
 // if right click, erase that thang
-if (instance_exists(select) and mouse_check_button_pressed(mb_right) and point_in_rectangle(mouse_x, mouse_y, hoverable.x -36, hoverable.y - 36, hoverable.x + 36, hoverable.y + 36)){
+if (instance_exists(select) and mouse_check_button_pressed(mb_right) and point_in_rectangle(mouse_x, mouse_y, hoverable.x, hoverable.y, hoverable.x + hoverable.sprite_width, hoverable.y + hoverable.sprite_height)){
 	instance_destroy(hoverable);
 }

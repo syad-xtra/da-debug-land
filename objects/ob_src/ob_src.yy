@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "ob_src",
   "spriteId": {
-    "name": "sp_zzz",
-    "path": "sprites/sp_zzz/sp_zzz.yy",
+    "name": "sp_src",
+    "path": "sprites/sp_src/sp_src.yy",
   },
   "solid": false,
   "visible": true,
