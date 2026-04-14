@@ -12,8 +12,7 @@ var sely = selected_item.y;}
 // it defines a rectangular area that can be picked up
 // instead of yknow
 // clicking on screen and the closest instances gets yoinked to you
-show_debug_message( hoverable != noone)
-if selected_item = noone and mouse_check_button_pressed(mb_left) and hoverable != noone{ //  point_in_rectangle(mouse_x, mouse_y, hoverable.x, hoverable.y, hoverable.x + hoverable.sprite_width, hoverable.y + hoverable.sprite_height){
+if selected_item = noone and mouse_check_button_pressed(mb_left) and hoverable != noone and point_in_rectangle(mouse_x, mouse_y, hoverable.x, hoverable.y, hoverable.x + hoverable.sprite_width, hoverable.y + hoverable.sprite_height){ //  {
 	// if i didnt do this game maker would pick up every instance of ob_selectable
 	selected_item = instance_nearest(mouse_x, mouse_y, select);
 	audio_play_sound(sn_select,1,0);
@@ -36,12 +35,12 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 				if (selected_object = food){
 					control.rating += 0.25;
 					customer.mood = 2;
-					customer.image_index = 2;
+					customer.sprite_index = sp_customer_satisfied;
 				}
 				else{
 					control.rating -= 0.5;
 					customer.mood = 1;
-					customer.image_index = 1;
+					customer.sprite_index = sp_customer_mad;
 				}
 			}
 			control.rating = clamp(control.rating, 0, 5);
@@ -66,7 +65,7 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 				}
 			}
 		}
-	if (instance_exists(selected_item) and !collision_rectangle_list(selx, sely, selx + selected_item.sprite_width, sely + selected_item.sprite_height, mix_area, false, false, mix_area_list, false)){
+	if (instance_exists(selected_item) and !collision_rectangle_list(mix_area.bbox_left +offset, mix_area.bbox_top +offset, mix_area.bbox_right -offset, mix_area.bbox_bottom -offset, selected_item, false, false, mix_area_list, false)){
 		instance_destroy(selected_item);
 	}
 	ds_list_clear(customer_list);

@@ -1,4 +1,4 @@
-image_index = 0;
+sprite_index = sp_customer_normal;
 mood = 0;
 clickable = true;
-ob_text.chosen = noone;
+ob_text.chosen[0] = noone;

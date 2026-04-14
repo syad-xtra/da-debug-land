@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "ob_customer",
   "spriteId": {
-    "name": "sp_customer",
-    "path": "sprites/sp_customer/sp_customer.yy",
+    "name": "sp_customer_normal",
+    "path": "sprites/sp_customer_normal/sp_customer_normal.yy",
   },
   "solid": false,
   "visible": true,

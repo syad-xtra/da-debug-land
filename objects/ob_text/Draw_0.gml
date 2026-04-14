@@ -6,16 +6,23 @@ if instance_exists(book){
 		var width = book.sprite_width/2;
 		var height = book.sprite_height/2;
 		smallCenteredText();
+		draw_set_color(c_white);
 		draw_text(book.x + width, book.y + height, text);
 	}
 }
 
 if instance_exists(customer){
+	smallCenteredText();
+	draw_set_color(c_black);
+	var mid_point = customer.bbox_right + (sprite_get_bbox_right(txt_box) - sprite_get_bbox_left(txt_box))/2 - 4;
 	if customer.food_wanted != noone{
-		var text = "I want " + customer.food_list[customer.food_pos][0][1];
-		var width = customer.sprite_width/2;
-		smallCenteredText();
-		draw_text(customer.x + width, customer.y - offset, text);
+		var food = asset_get_index(customer.food_list[customer.food_pos][0][0]);
+		food = object_get_sprite(food);
+		draw_sprite(txt_box,0,customer.bbox_right - offset_x, customer.bbox_top);
+		draw_text(mid_point, customer.y + offset_y, "I want");
+		draw_sprite(food, 0, mid_point - sprite_get_width(food)/2, customer.y + offset_y*1.2);
+		var text = customer.food_list[customer.food_pos][0][1];
+		draw_text(mid_point, customer.y + offset_y*1.5 + 28, text);
 	}
 
 	// i want to keep text a temporary variable. but this keeps updating every frame
@@ -23,26 +30,27 @@ if instance_exists(customer){
 	// hence chosen
 	if customer.mood != 0{
 		var text = text;
-		if chosen = noone{
+		if chosen[0] = noone{
 			switch customer.mood{
 				case 1:
-					text = choose("I have an army of lawyers.", "I'm literally going to kill myself.", "What's wrong with you?");
+					text = choose(text_opt[0], text_opt[1], text_opt[2]);
 				break;
 				case 2:
-					text = choose("Yay, thanks!", "This is the best thing ever.", "Hell yes...");
+					text = choose(text_opt[3], text_opt[4], text_opt[5]);
 				break;
 			}
-			chosen = text;
+			chosen[0] = text;
 		}
-		var width = string_width(chosen);
-		var width = customer.sprite_width/2;
-		smallCenteredText();
-		draw_text(customer.x + width, customer.y - offset, chosen);
+		draw_sprite(txt_box,0,customer.bbox_right - offset_x, customer.bbox_top);
+		draw_text(mid_point, customer.y + (sprite_get_bbox_bottom(txt_box) - sprite_get_bbox_top(txt_box))/2, chosen[0][0]);
+		if (chosen[0][1] != noone){
+		draw_text(mid_point, customer.y + (sprite_get_bbox_bottom(txt_box) - sprite_get_bbox_top(txt_box))/2 + 12, chosen[0][1]);}
 	}
 }
 
 // caption underneath ingredient
 if instance_exists(select){
+	draw_set_color(c_white);
 	for (var i = 0; i < instance_number(select); i++){
 		var ingredient_list = array_create(0);
 		ingredient_list[i] = instance_find(select, i);
@@ -53,7 +61,7 @@ if instance_exists(select){
 				width = ingredient_list[i].sprite_width/2;
 				smallCenteredText();
 				// apparently game maker can read instance refs. good to know
-				draw_text(ingredient_list[i].x + width, ingredient_list[i].y + ingredient_list[i].sprite_height + offset/4, text);
+				draw_text(ingredient_list[i].x + width, ingredient_list[i].y + ingredient_list[i].sprite_height + offset_y/4, text);
 			}
 	}
 }

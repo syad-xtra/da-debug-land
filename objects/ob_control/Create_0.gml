@@ -1,4 +1,6 @@
+randomize();
 rating = 3;
+alarm[0] = 300;
 
 // BLOOD
 combo[0][0][0] = "ob_blood" // object name
