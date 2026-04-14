@@ -45,7 +45,6 @@ combo[6][0][3] = true
 combo[6][1][0] = "ob_bile"
 combo[6][1][1] = "ob_blood"
 
-
 // CONGEALED BLOOD
 combo[7][0][0] = "ob_con_bld"
 combo[7][0][1] = "Congealed Blood"

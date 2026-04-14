@@ -1,7 +1,7 @@
 /// @description girl like everything
 
 // i forgot why i wrote this code i just remember it works
-var hoverable = instance_nearest(mouse_x, mouse_y, select);
+var hoverable = instance_position(mouse_x, mouse_y, select);
 
 // makes it easier to read
 if (instance_exists(selected_item)){
@@ -12,7 +12,8 @@ var sely = selected_item.y;}
 // it defines a rectangular area that can be picked up
 // instead of yknow
 // clicking on screen and the closest instances gets yoinked to you
-if selected_item = noone and mouse_check_button_pressed(mb_left) and instance_exists(select) and point_in_rectangle(mouse_x, mouse_y, hoverable.x -0, hoverable.y - 0, hoverable.x + hoverable.sprite_width, hoverable.y + hoverable.sprite_height){
+show_debug_message( hoverable != noone)
+if selected_item = noone and mouse_check_button_pressed(mb_left) and hoverable != noone{ //  point_in_rectangle(mouse_x, mouse_y, hoverable.x, hoverable.y, hoverable.x + hoverable.sprite_width, hoverable.y + hoverable.sprite_height){
 	// if i didnt do this game maker would pick up every instance of ob_selectable
 	selected_item = instance_nearest(mouse_x, mouse_y, select);
 	audio_play_sound(sn_select,1,0);

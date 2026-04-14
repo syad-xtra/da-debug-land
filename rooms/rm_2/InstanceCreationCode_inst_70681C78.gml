@@ -1,1 +1,1 @@
-image_index = 2;
+src_type = 2;

@@ -1,1 +1,1 @@
-image_index = 5;
+src_type = 5;
