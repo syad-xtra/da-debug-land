@@ -11,7 +11,7 @@ if instance_exists(book){
 	}
 }
 
-if instance_exists(customer){
+if instance_exists(customer) and room = rm_2{
 	smallCenteredText();
 	draw_set_color(c_black);
 	var mid_point = customer.bbox_right + (sprite_get_bbox_right(txt_box) - sprite_get_bbox_left(txt_box))/2 - 4;

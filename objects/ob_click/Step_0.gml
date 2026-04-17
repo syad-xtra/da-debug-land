@@ -12,7 +12,7 @@ var sely = selected_item.y;}
 // it defines a rectangular area that can be picked up
 // instead of yknow
 // clicking on screen and the closest instances gets yoinked to you
-if selected_item = noone and mouse_check_button_pressed(mb_left) and hoverable != noone and point_in_rectangle(mouse_x, mouse_y, hoverable.x, hoverable.y, hoverable.x + hoverable.sprite_width, hoverable.y + hoverable.sprite_height){ //  {
+if selected_item = noone and mouse_check_button_pressed(mb_left) and hoverable != noone{
 	// if i didnt do this game maker would pick up every instance of ob_selectable
 	selected_item = instance_nearest(mouse_x, mouse_y, select);
 	audio_play_sound(sn_select,1,0);
@@ -77,6 +77,7 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 // centers the selection
 if (instance_exists(selected_item) and selected_item != noone){
 	// cant use selx or sely here gotta use the full thing
+	ob_cursor.image_index = 2;
 	selected_item.x = mouse_x - selected_item.sprite_width/2;
 	selected_item.y = mouse_y - selected_item.sprite_height/2;
 }

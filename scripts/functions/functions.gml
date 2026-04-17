@@ -7,7 +7,7 @@ function itemMerger(){
 	combo = ob_control.combo;
 	// need this so i can actually delete the two closest instances
 	var objects_index = ob_click.objects;
-	indexToObject()
+	indexToObject();
 	// SORT after convert. vivien. not before. you. youuuuuuuu
 	ds_list_sort(objects, true);
 	seeContent();
@@ -63,4 +63,46 @@ function smallCenteredText(){
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
 	draw_set_font(fnt_small);
+}
+
+function largeCenteredText(){
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_middle);
+	draw_set_font(fnt_large);
+}
+
+function objectNameToSprite(ob_name){
+	var result = asset_get_index(ob_name);
+	result = object_get_sprite(result);
+	return result;
+}
+
+// needs the asset NAME, not id
+// this class is making me realize that im not that bad at coding
+// i just need to actually code to get a feel for the concept
+// which like. duh. but like we DIDNT CODE DURING COMPUTING A LEVEL??
+// even though we had to learn it.
+// it was all just... staring at powerpoints*! how useless!
+// i learned nothing because we did nothing!
+// we did more in the damn O level
+// probably doesn't help that the lecturer disliked me for being a foreigner
+// *and also having to buy said powerpoints for like €10
+// only to learn that it didn't even cover half of first year
+// GREEDY GREEDY GREEDY GREEDY!
+// and somehow art A level was WORSE
+// JC sucked man
+// (this rant has been brought to you by me finally understanding what return does)
+function checkUnlock(ing, combo){
+	for (var i = 0; i < array_length(combo); i++){
+		if (ing = combo[i][0][0]){
+			if (combo[i][0][2]){return true;}
+			else{return false;}
+		}
+	}
+}
+
+function checkName(ing, combo){
+	for (var i = 0; i < array_length(combo); i++){
+		if (ing = combo[i][0][0]){return combo[i][0][1];}
+	}
 }

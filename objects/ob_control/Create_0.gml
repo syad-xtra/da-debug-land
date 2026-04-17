@@ -1,6 +1,12 @@
 randomize();
 rating = 3;
-alarm[0] = 300;
+difficulty = 60;
+range_min = 1800;
+range_max = 3600;
+range_tmax = 7200;
+range_tmin = 2100;
+window_set_cursor(cr_none);
+instance_create_layer(mouse_x, mouse_y, "Mouse_Layer", ob_cursor);
 
 // BLOOD
 combo[0][0][0] = "ob_blood" // object name
