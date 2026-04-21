@@ -17,7 +17,9 @@
   ],
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Mouse_Layer","instances":[],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances_Text","instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":"_filter_outline","properties":[
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances_Text","instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3FD768DF","properties":[],"isDnd":false,"objectId":{"name":"ob_text","path":"objects/ob_text/ob_text.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":64.0,"y":-32.0,},
+      ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":"_filter_outline","properties":[
         {"type":1,"name":"g_OutlineColour","value":"#FF000000",},
         {"type":0,"name":"g_OutlineRadius","value":"2",},
         {"type":0,"name":"g_OutlinePixelScale","value":"1",},
@@ -39,6 +41,7 @@
     {"name":"inst_5918B097","path":"rooms/rm_3/rm_3.yy",},
     {"name":"inst_5B79FD3E","path":"rooms/rm_3/rm_3.yy",},
     {"name":"inst_60DDBA08","path":"rooms/rm_3/rm_3.yy",},
+    {"name":"inst_3FD768DF","path":"rooms/rm_3/rm_3.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

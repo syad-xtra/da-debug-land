@@ -30,7 +30,7 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 	// do u like my debug messages 🥺
 	if collision_rectangle_list(selx, sely, selx + selected_item.sprite_width, sely + selected_item.sprite_height, customer, false, false, customer_list, false){
 			show_debug_message("collided with customer");
-			if (customer.clickable){
+			if (customer.ordering){
 				var food = asset_get_index(customer.food_wanted);
 				if (selected_object = food){
 					control.rating += 0.25;
@@ -42,11 +42,22 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 					customer.mood = 1;
 					customer.sprite_index = sp_customer_mad;
 				}
+				control.alarm[0] = -1;
+				if control.alarm[1] != -1{
+					switch(customer.mood){
+					case 1:
+						rating--;
+					break;
+					case 2:
+						rating -= 0.25;
+					break;
+					}
+				}
+				control.alarm[1] = -1;
 			}
 			control.rating = clamp(control.rating, 0, 5);
-			customer.clickable = false;
+			customer.ordering = false;
 			instance_destroy(selected_item);
-			customer.food_wanted = noone;
 			customer.alarm[0] = 120;
 		}
 	// originally used instance_position_list, but i needed it to be within a defined area instead at a point
@@ -61,7 +72,6 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 					show_debug_message("collision detection works");
 					//seeContent();
 					itemMerger();
-					break; // stops a for loop
 				}
 			}
 		}
@@ -83,6 +93,6 @@ if (instance_exists(selected_item) and selected_item != noone){
 }
 
 // if right click, erase that thang
-if (instance_exists(select) and mouse_check_button_pressed(mb_right) and point_in_rectangle(mouse_x, mouse_y, hoverable.x, hoverable.y, hoverable.x + hoverable.sprite_width, hoverable.y + hoverable.sprite_height)){
+if (instance_exists(select) and mouse_check_button_pressed(mb_right) and hoverable != noone){
 	instance_destroy(hoverable);
 }

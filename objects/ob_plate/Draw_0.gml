@@ -25,4 +25,5 @@ switch (base_ing){
 }
 
 smallCenteredText();
+draw_set_color(c_white);
 draw_text(x + sprite_width/2.05, y + sprite_height/1.7, text);

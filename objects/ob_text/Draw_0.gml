@@ -19,7 +19,9 @@ if instance_exists(customer) and room = rm_2{
 		var food = asset_get_index(customer.food_list[customer.food_pos][0][0]);
 		food = object_get_sprite(food);
 		draw_sprite(txt_box,0,customer.bbox_right - offset_x, customer.bbox_top);
-		draw_text(mid_point, customer.y + offset_y, "I want");
+		var start = "I want";
+		if (control.alarm[1] != -1){start = "Oy! I said I want";}
+		draw_text(mid_point, customer.y + offset_y, start);
 		draw_sprite(food, 0, mid_point - sprite_get_width(food)/2, customer.y + offset_y*1.2);
 		var text = customer.food_list[customer.food_pos][0][1];
 		draw_text(mid_point, customer.y + offset_y*1.5 + 28, text);

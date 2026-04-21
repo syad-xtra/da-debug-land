@@ -4,6 +4,7 @@
   "name": "da debug land",
   "resources": [
     {"id":{"name":"sp_customer_normal","path":"sprites/sp_customer_normal/sp_customer_normal.yy",},"order":0,},
+    {"id":{"name":"sn_complain","path":"sounds/sn_complain/sn_complain.yy",},"order":1,},
     {"id":{"name":"sp_bld_sc","path":"sprites/sp_bld_sc/sp_bld_sc.yy",},"order":6,},
     {"id":{"name":"sp_eye","path":"sprites/sp_eye/sp_eye.yy",},"order":3,},
     {"id":{"name":"sp_kisko_tiny","path":"sprites/sp_kisko_tiny/sp_kisko_tiny.yy",},"order":4,},
@@ -44,6 +45,7 @@
     {"id":{"name":"sp_cursor","path":"sprites/sp_cursor/sp_cursor.yy",},"order":23,},
     {"id":{"name":"sp_customer_satisfied","path":"sprites/sp_customer_satisfied/sp_customer_satisfied.yy",},"order":2,},
     {"id":{"name":"ob_click","path":"objects/ob_click/ob_click.yy",},"order":5,},
+    {"id":{"name":"ob_hoverable","path":"objects/ob_hoverable/ob_hoverable.yy",},"order":21,},
     {"id":{"name":"ob_control","path":"objects/ob_control/ob_control.yy",},"order":6,},
     {"id":{"name":"ob_src","path":"objects/ob_src/ob_src.yy",},"order":4,},
     {"id":{"name":"ob_plate","path":"objects/ob_plate/ob_plate.yy",},"order":16,},
@@ -57,6 +59,7 @@
     {"id":{"name":"functions","path":"scripts/functions/functions.yy",},"order":0,},
     {"id":{"name":"ob_bile","path":"objects/ob_bile/ob_bile.yy",},"order":0,},
     {"id":{"name":"sp_player","path":"sprites/sp_player/sp_player.yy",},"order":5,},
+    {"id":{"name":"sn_door","path":"sounds/sn_door/sn_door.yy",},"order":2,},
     {"id":{"name":"sp_customer","path":"sprites/sp_customer/sp_customer.yy",},"order":1,},
     {"id":{"name":"sp_zzz_tiny","path":"sprites/sp_zzz_tiny/sp_zzz_tiny.yy",},"order":7,},
     {"id":{"name":"sp_shr_src","path":"sprites/sp_shr_src/sp_shr_src.yy",},"order":4,},

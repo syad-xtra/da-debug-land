@@ -77,6 +77,18 @@ function objectNameToSprite(ob_name){
 	return result;
 }
 
+//timer
+
+function timer(time){
+	var time_min = floor(ob_control.alarm[time]/3600);
+	var time_sec = ob_control.alarm[time];
+	if (ob_control.alarm[time] >= 3600){time_sec = ob_control.alarm[0]%3600;}
+	time_sec = floor(time_sec/60);
+	if (time_sec >= 10){time_sec = string(time_min) + ":" + string(time_sec);}
+	else{time_sec = string(time_min) + ":0" + string(time_sec);}
+	return time_sec;
+}
+
 // needs the asset NAME, not id
 // this class is making me realize that im not that bad at coding
 // i just need to actually code to get a feel for the concept

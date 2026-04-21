@@ -8,11 +8,6 @@ for (var i = 6; i < array_length(combo); i++){
 alpha = unlock_number/(array_length(combo)-6);
 image_alpha = alpha;
 
-show_debug_message(x);
-show_debug_message(y);
-show_debug_message(image_alpha);
-show_debug_message(sprite_index);
-
 if position_meeting(mouse_x,mouse_y,self){
 	if mouse_check_button_pressed(mb_left){
 		switch (room){

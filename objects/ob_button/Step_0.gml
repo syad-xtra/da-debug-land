@@ -34,20 +34,20 @@ function scrollDifficulty(){
 	switch (dir){
 		case 1:
 			difficulty = 30;
-			range_min = 2100;
-			range_max = 4800;
+			range_min = 1200;
+			range_max = 2400;
 			text = "Easy";
 		break;
 		case 2:
 			difficulty = 60;
-			range_min = 1800;
-			range_max = 3600;
+			range_min = 600;
+			range_max = 1200;
 			text = "Normal";
 		break;
 		case 3:
 			difficulty = 120;
-			range_min = 900;
-			range_max = 1500;
+			range_min = 300;
+			range_max = 600;
 			text = "Hard";
 		break;
 	}

@@ -1,10 +1,12 @@
 randomize();
 rating = 3;
 difficulty = 60;
-range_min = 1800;
-range_max = 3600;
-range_tmax = 7200;
-range_tmin = 2100;
+range_min = 600;
+range_max = 1200;
+range_tmax = 300;
+range_tmin = 300;
+x_customer = 372;
+y_customer = 14;
 window_set_cursor(cr_none);
 instance_create_layer(mouse_x, mouse_y, "Mouse_Layer", ob_cursor);
 
