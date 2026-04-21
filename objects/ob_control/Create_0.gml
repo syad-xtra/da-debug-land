@@ -120,10 +120,10 @@ combo[13][1][0] = "ob_brain"
 combo[13][1][1] = "ob_shroom"
 
 // FRIED SHROOM
-combo[13][0][0] = "ob_fried_shroom"
-combo[13][0][1] = "Fried Shroom"
-combo[13][0][2] = false
-combo[13][0][3] = true
+combo[14][0][0] = "ob_fried_shroom"
+combo[14][0][1] = "Fried Shroom"
+combo[14][0][2] = false
+combo[14][0][3] = true
 
-combo[13][1][0] = "ob_bile"
-combo[13][1][1] = "ob_shroom"
+combo[14][1][0] = "ob_bile"
+combo[14][1][1] = "ob_shroom"
