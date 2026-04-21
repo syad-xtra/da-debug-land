@@ -33,31 +33,32 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 			if (customer.ordering){
 				var food = asset_get_index(customer.food_wanted);
 				if (selected_object = food){
-					control.rating += 0.25;
+					ob_control.rating += 0.25;
 					customer.mood = 2;
 					customer.sprite_index = sp_customer_satisfied;
 				}
 				else{
-					control.rating -= 0.5;
+					ob_control.rating -= 0.5;
 					customer.mood = 1;
 					customer.sprite_index = sp_customer_mad;
 				}
-				control.alarm[0] = -1;
 				if control.alarm[1] != -1{
 					switch(customer.mood){
 					case 1:
-						rating--;
+						ob_control.rating--;
 					break;
 					case 2:
-						rating -= 0.25;
+						ob_control.rating -= 0.5;
 					break;
 					}
 				}
+				control.alarm[0] = -1;
 				control.alarm[1] = -1;
 			}
-			control.rating = clamp(control.rating, 0, 5);
+			ob_control.rating = clamp(ob_control.rating, 0, 5);
 			customer.ordering = false;
 			instance_destroy(selected_item);
+			show_debug_message("Current mood: " + string(customer.mood));
 			customer.alarm[0] = 120;
 		}
 	// originally used instance_position_list, but i needed it to be within a defined area instead at a point

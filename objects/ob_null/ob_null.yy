@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "ob_null",
   "spriteId": {
-    "name": "sp_placeholder",
-    "path": "sprites/sp_placeholder/sp_placeholder.yy",
+    "name": "sp_null",
+    "path": "sprites/sp_null/sp_null.yy",
   },
   "solid": false,
   "visible": true,

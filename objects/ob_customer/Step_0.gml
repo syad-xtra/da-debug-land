@@ -18,7 +18,7 @@ if (food_wanted = noone and x = x_pos and !leaving){
 }
 
 if (leaving){x -= spd;}
-if (x = -200){
+if (x = -69){
 	audio_play_sound(sn_door, 0, 0);
-	alarm[1] = 240;
+	alarm[1] = 90;
 }

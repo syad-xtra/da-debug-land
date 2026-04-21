@@ -118,3 +118,9 @@ function checkName(ing, combo){
 		if (ing = combo[i][0][0]){return combo[i][0][1];}
 	}
 }
+
+// this is SO stupid
+function setUIHeight(element){
+	element.image_yscale = 1;
+	element.image_yscale = room_height/element.sprite_height;
+}

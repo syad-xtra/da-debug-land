@@ -1,10 +1,11 @@
 randomize();
 rating = 3;
+customer_mad = false;
 difficulty = 60;
 range_min = 600;
 range_max = 1200;
-range_tmax = 300;
-range_tmin = 300;
+range_tmax = 600;
+range_tmin = 600;
 x_customer = 372;
 y_customer = 14;
 window_set_cursor(cr_none);
@@ -72,3 +73,57 @@ combo[8][0][3] = true
 
 combo[8][1][0] = "ob_con_bld"
 combo[8][1][1] = "ob_sw_alg"
+
+// ROT
+combo[9][0][0] = "ob_rot"
+combo[9][0][1] = "Rot"
+combo[9][0][2] = false
+combo[9][0][3] = true
+
+combo[9][1][0] = "ob_blood"
+combo[9][1][1] = "ob_shroom"
+
+// BLOODY STEAMED EYE
+combo[10][0][0] = "ob_bld_eye"
+combo[10][0][1] = "Blood Steamed Eye"
+combo[10][0][2] = false
+combo[10][0][3] = true
+
+combo[10][1][0] = "ob_blood"
+combo[10][1][1] = "ob_eye"
+
+// FRIED EYE
+combo[11][0][0] = "ob_fried_eye"
+combo[11][0][1] = "Fried Eye"
+combo[11][0][2] = false
+combo[11][0][3] = true
+
+combo[11][1][0] = "ob_bile"
+combo[11][1][1] = "ob_eye"
+
+// EYE WRAP
+combo[12][0][0] = "ob_eye_wrap"
+combo[12][0][1] = "Wrapped Eye"
+combo[12][0][2] = false
+combo[12][0][3] = true
+
+combo[12][1][0] = "ob_eye"
+combo[12][1][1] = "ob_sw_alg"
+
+// ATROPHIED BRAIN
+combo[13][0][0] = "ob_at_brain"
+combo[13][0][1] = "Atrophied Brain"
+combo[13][0][2] = false
+combo[13][0][3] = true
+
+combo[13][1][0] = "ob_brain"
+combo[13][1][1] = "ob_shroom"
+
+// FRIED SHROOM
+combo[13][0][0] = "ob_fried_shroom"
+combo[13][0][1] = "Fried Shroom"
+combo[13][0][2] = false
+combo[13][0][3] = true
+
+combo[13][1][0] = "ob_bile"
+combo[13][1][1] = "ob_shroom"

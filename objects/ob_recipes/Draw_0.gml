@@ -1,4 +1,6 @@
+
 var d_y = 24;
+draw_set_color(c_black);
 smallCenteredText();
 for (var i = 6; i < array_length(combo); i++){
 	var d_sprite = objectNameToSprite(combo[i][0][0]);

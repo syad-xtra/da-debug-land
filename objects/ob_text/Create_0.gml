@@ -5,7 +5,7 @@
 // ^^^ killing myself
 draw_set_font(fnt_large);
 chosen[0] = noone;
-offset_x = 12;
+offset_x = 16;
 offset_y = 24;
 
 // screw it just gonna use this for every text item
