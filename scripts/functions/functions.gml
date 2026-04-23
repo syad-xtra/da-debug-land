@@ -14,8 +14,8 @@ function itemMerger(){
 	// dear god this thing. it reads through the combos then looks for a matching set of combos
 	// does nothing if it finds nothing
 	// technology!
-	for (var i=0; i<array_length(combo); i += 1){
-			for (var e=1; e<array_length(combo[i]); e += 1){
+	for (var i=0; i<array_length(combo); i++){
+			for (var e=1; e<array_length(combo[i]); e++){
 				if (combo[i][e][0] = ds_list_find_value(objects, 0) and combo[i][e][1] = ds_list_find_value(objects, 1)){
 					show_debug_message("combo works");
 					var result = asset_get_index(combo[i][0][0]);
@@ -23,7 +23,7 @@ function itemMerger(){
 					// dear god this thing too
 					// technically i only need it to delete two things. but well. i lazy
 					// THREE FOR LOOPS BTW. IVE GONE MAD
-					for (var o=0;o<2;o+=1){
+					for (var o=0;o<2;o++){
 						// youre not gonna catch me write this out 👇 again
 						var object = asset_get_index(ds_list_find_value(objects_index, o));
 						instance_destroy(instance_nearest(mouse_x, mouse_y,object));

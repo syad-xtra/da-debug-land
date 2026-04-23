@@ -12,6 +12,8 @@ var sely = selected_item.y;}
 // it defines a rectangular area that can be picked up
 // instead of yknow
 // clicking on screen and the closest instances gets yoinked to you
+
+// ^ ignore the above comments. they no longer apply. now it just checks for the hovered over item
 if selected_item = noone and mouse_check_button_pressed(mb_left) and hoverable != noone{
 	// if i didnt do this game maker would pick up every instance of ob_selectable
 	selected_item = instance_nearest(mouse_x, mouse_y, select);

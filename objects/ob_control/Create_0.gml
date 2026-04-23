@@ -94,6 +94,9 @@ combo[10][0][3] = true
 combo[10][1][0] = "ob_blood"
 combo[10][1][1] = "ob_eye"
 
+combo[10][2][0] = "ob_bld_sc"
+combo[10][2][1] = "ob_eye"
+
 // FRIED EYE
 combo[11][0][0] = "ob_fried_eye"
 combo[11][0][1] = "Fried Eye"
