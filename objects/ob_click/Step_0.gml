@@ -28,7 +28,8 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 	// have to check with customer first for some reason idk
 	// otherwise it just doesnt work
 	// do u like my debug messages 🥺
-	if collision_rectangle_list(selx, sely, selx + selected_item.sprite_width, sely + selected_item.sprite_height, customer, false, false, customer_list, false){
+	if collision_rectangle_list(selx, sely, selx + selected_item.sprite_width, sely + selected_item.sprite_height, customer, false, false, customer_list, false)
+	and customer.food_wanted != noone{
 			show_debug_message("collided with customer");
 			if (customer.ordering){
 				var food = asset_get_index(customer.food_wanted);
@@ -57,7 +58,6 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 			}
 			ob_control.rating = clamp(ob_control.rating, 0, 5);
 			customer.ordering = false;
-			instance_destroy(selected_item);
 			show_debug_message("Current mood: " + string(customer.mood));
 			customer.alarm[0] = 120;
 		}

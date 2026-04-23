@@ -26,7 +26,6 @@
       ],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5918B097","properties":[],"isDnd":false,"objectId":{"name":"ob_recipes","path":"objects/ob_recipes/ob_recipes.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":-32.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5B79FD3E","properties":[],"isDnd":false,"objectId":{"name":"ob_text","path":"objects/ob_text/ob_text.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":-32.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7501317C","properties":[],"isDnd":false,"objectId":{"name":"ob_recipe_book_grey","path":"objects/ob_recipe_book_grey/ob_recipe_book_grey.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":5.0,"y":34.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_76AD17C2","properties":[],"isDnd":false,"objectId":{"name":"ob_recipe_book","path":"objects/ob_recipe_book/ob_recipe_book.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":5.0,"y":34.0,},
       ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
@@ -41,7 +40,6 @@
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_5918B097","path":"rooms/rm_3/rm_3.yy",},
-    {"name":"inst_5B79FD3E","path":"rooms/rm_3/rm_3.yy",},
     {"name":"inst_3FD768DF","path":"rooms/rm_3/rm_3.yy",},
     {"name":"inst_7501317C","path":"rooms/rm_3/rm_3.yy",},
     {"name":"inst_2DCAD521","path":"rooms/rm_3/rm_3.yy",},

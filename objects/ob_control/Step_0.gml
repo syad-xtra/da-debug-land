@@ -10,6 +10,23 @@ if (room = rm_2){
 	setUIHeight(ob_null);
 	ob_recipe_book_grey.x = 5;
 	ob_recipe_book_grey.y = 34;
+	var unlock_num = 0;
+	for (var i = 0; i < array_length(combo); i++){
+		if (combo[i][0][2]){unlock_num++;}
+	}
+
+	if (rating < 1){
+		end_text = "You lost, lol";
+		game_ending = true;
+	}
+
+	if (rating >= 5 and unlock_num = array_length(combo)){
+		end_text = "You win, yay!";
+		game_ending = true;
+	}
+
+	if (game_ending){
+		room_goto(rm_ending);}
 }
 
 // to restart game
@@ -19,8 +36,4 @@ if keyboard_check_pressed(ord("R")){
 
 if (customer_mad = true and instance_exists(ob_customer)){
 ob_customer.sprite_index = sp_customer_mad;
-}
-
-if (rating < 1){
-	game_restart();
 }

@@ -1,5 +1,7 @@
 randomize();
 rating = 3;
+end_text = "Placeholder";
+game_ending = false
 customer_mad = false;
 difficulty = 60;
 range_min = 600;

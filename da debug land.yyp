@@ -64,6 +64,7 @@
     {"id":{"name":"ob_recipe_book","path":"objects/ob_recipe_book/ob_recipe_book.yy",},"order":9,},
     {"id":{"name":"ob_clt_sp","path":"objects/ob_clt_sp/ob_clt_sp.yy",},"order":7,},
     {"id":{"name":"ob_con_bld","path":"objects/ob_con_bld/ob_con_bld.yy",},"order":8,},
+    {"id":{"name":"rm_ending","path":"rooms/rm_ending/rm_ending.yy",},"order":4,},
     {"id":{"name":"sp_button","path":"sprites/sp_button/sp_button.yy",},"order":22,},
     {"id":{"name":"functions","path":"scripts/functions/functions.yy",},"order":0,},
     {"id":{"name":"ob_bile","path":"objects/ob_bile/ob_bile.yy",},"order":0,},
@@ -121,6 +122,7 @@
     {"roomId":{"name":"rm_2","path":"rooms/rm_2/rm_2.yy",},},
     {"roomId":{"name":"rm_3","path":"rooms/rm_3/rm_3.yy",},},
     {"roomId":{"name":"rm_1","path":"rooms/rm_1/rm_1.yy",},},
+    {"roomId":{"name":"rm_ending","path":"rooms/rm_ending/rm_ending.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
