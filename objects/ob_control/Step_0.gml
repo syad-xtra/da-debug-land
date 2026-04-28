@@ -34,6 +34,7 @@ if keyboard_check_pressed(ord("R")){
 	game_restart();
 }
 
+// clears area
 if (instance_exists(ob_selectable) and keyboard_check_pressed(ord("C"))){
 	instance_destroy(ob_selectable);
 }

@@ -6,10 +6,11 @@ customer_mad = false;
 difficulty = 60;
 range_min = 600;
 range_max = 1200;
-range_tmax = 600;
-range_tmin = 600;
+range_tmax = 3600;
+range_tmin = 2800;
 x_customer = 372;
 y_customer = 14;
+debug = false;
 window_set_cursor(cr_none);
 instance_create_layer(mouse_x, mouse_y, "Mouse_Layer", ob_cursor);
 

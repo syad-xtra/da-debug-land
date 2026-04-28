@@ -9,7 +9,6 @@ function itemMerger(){
 	var objects_index = ob_click.objects;
 	indexToObject(objects);
 	// SORT after convert. vivien. not before. you. youuuuuuuu
-	ds_list_sort(objects, true);
 	seeContent();
 	// dear god this thing. it reads through the combos then looks for a matching set of combos
 	// does nothing if it finds nothing
@@ -20,23 +19,26 @@ function itemMerger(){
 	objects_array = listToArray(objects, objects_array);
 	for (var i=0; i<array_length(combo); i++){
 			for (var e=1; e<array_length(combo[i]); e++){
-				 if (valueArray(combo[i][e], selected_object) and !merged){	 
-					var sel_pos = positionArray(combo[i][e], selected_object);
-					var comb_pos = 0;
-					if (sel_pos = 0){comb_pos = 1;}
-					var pos1 = combo[i][e][comb_pos];
-					var pos2 = combo[i][e][sel_pos];
-					if (valueArray(objects_array,combo[i][e][comb_pos])){
-						var result = asset_get_index(combo[i][0][0]);
-						show_debug_message(selected_item);
-						merge(pos1, pos2, result);
-						if (combo[i][0][2] = false){
-						combo[i][0][2] = true;
-						show_debug_message(combo[i][0][1] + " is now unlocked.")
-						}
-						else{show_debug_message(combo[i][0][1] + " is already known.")}
-					}
+				 if (!valueArray(combo[i][e], selected_object) or merged){ continue; } // skip loop
+				 
+				var sel_pos = positionArray(combo[i][e], selected_object);
+				var comb_pos = 0;
+				if (sel_pos = 0){comb_pos = 1;}
+				var pos1 = combo[i][e][comb_pos];
+				var pos2 = combo[i][e][sel_pos];
+				
+				if (!valueArray(objects_array,combo[i][e][comb_pos])){ continue; } // skip loop
+				
+				var result = asset_get_index(combo[i][0][0]);
+				show_debug_message(selected_item);
+				merge(pos1, pos2, result);
+				
+				if (combo[i][0][2] = false){
+				combo[i][0][2] = true;
+				show_debug_message(combo[i][0][1] + " is now unlocked.")
 				}
+				else{show_debug_message(combo[i][0][1] + " is already known.")}
+					
 				// behold the carcass of my previous code...
 				
 				//if (combo[i][e][0] = ds_list_find_value(objects, 0) and combo[i][e][1] = ds_list_find_value(objects, 1)){
