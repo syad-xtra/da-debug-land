@@ -30,7 +30,7 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 	// have to check with customer first for some reason idk
 	// otherwise it just doesnt work
 	// do u like my debug messages 🥺
-	if collision_rectangle_list(selx, sely, selx + selected_item.sprite_width, sely + selected_item.sprite_height, customer, false, false, customer_list, false)
+	if collision_rectangle_list(32, 0, 254, 100, selected_item, false, false, customer_list, false)
 	and customer.food_wanted != noone{
 			show_debug_message("collided with customer");
 			if (customer.ordering){
@@ -72,6 +72,8 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 			{
 				if (ds_list_find_value(objects, i) != selected_item)
 				{
+					var r_id = ds_list_find_index(objects, selected_item);
+					ds_list_delete(objects, r_id);
 					show_debug_message("collision detection works");
 					//seeContent();
 					itemMerger();
@@ -85,6 +87,7 @@ if selected_item != noone and mouse_check_button_released(mb_left) {
 	ds_list_clear(objects);
 	ds_list_clear(mix_area_list);
 	selected_item = noone;
+	merged = false;
 }
 
 // centers the selection

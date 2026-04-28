@@ -34,6 +34,10 @@ if keyboard_check_pressed(ord("R")){
 	game_restart();
 }
 
+if (instance_exists(ob_selectable) and keyboard_check_pressed(ord("C"))){
+	instance_destroy(ob_selectable);
+}
+
 if (customer_mad = true and instance_exists(ob_customer)){
 ob_customer.sprite_index = sp_customer_mad;
 }

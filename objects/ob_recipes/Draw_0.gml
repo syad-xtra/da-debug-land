@@ -18,6 +18,8 @@ for (var i = 6; i < array_length(combo); i++){
 	if (combo[i][0][2]){
 		var c_x1 = x_origin + x_offset + sprite_get_width(d_sprite)*2;
 		var c_x2 = c_x1 + x_offset + sprite_get_width(c1_sprite)*2;
+		draw_text(c_x2 - (c_x1/1.85), d_y + gap/2, "=");
+		draw_text(c_x2 - 24 , d_y + gap/2, "+");
 		draw_sprite(c1_sprite, 0, c_x1, d_y);
 		draw_sprite(c2_sprite, 0, c_x2, d_y);
 		draw_text(c_x1 + sprite_get_width(c1_sprite)/2, d_y + gap, checkName(combo[i][1][0], combo));

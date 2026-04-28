@@ -10,3 +10,4 @@ selected_object = noone;
 objects = ds_list_create();
 customer_list = ds_list_create();
 mix_area_list = ds_list_create();
+merged = false;

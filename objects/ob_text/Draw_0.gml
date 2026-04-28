@@ -53,17 +53,16 @@ if instance_exists(customer) and room = rm_2{
 // caption underneath ingredient
 if instance_exists(select){
 	draw_set_color(c_white);
+	var text = noone;
 	for (var i = 0; i < instance_number(select); i++){
 		var ingredient_list = array_create(0);
 		ingredient_list[i] = instance_find(select, i);
 		var ingredient_name = object_get_name(ingredient_list[i].object_index);
 		for (var e = 0; e < array_length(combo); e++)
-			if (combo[e][0][0] = ingredient_name){
-				var text = combo[e][0][1];
-				width = ingredient_list[i].sprite_width/2;
-				smallCenteredText();
-				// apparently game maker can read instance refs. good to know
-				draw_text(ingredient_list[i].x + width, ingredient_list[i].y + ingredient_list[i].sprite_height + offset_y/4, text);
-			}
+			if (combo[e][0][0] = ingredient_name){text = combo[e][0][1];}
+		if (ingredient_name = "ob_sludge"){text = "Sludge"}
+		width = ingredient_list[i].sprite_width/2;
+		smallCenteredText();
+		draw_text(ingredient_list[i].x + width, ingredient_list[i].y + ingredient_list[i].sprite_height + offset_y/4, text);
 	}
 }
