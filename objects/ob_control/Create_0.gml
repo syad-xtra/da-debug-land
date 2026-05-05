@@ -10,7 +10,6 @@ range_tmax = 3600;
 range_tmin = 2800;
 x_customer = 372;
 y_customer = 14;
-debug = false;
 window_set_cursor(cr_none);
 instance_create_layer(mouse_x, mouse_y, "Mouse_Layer", ob_cursor);
 
@@ -133,3 +132,111 @@ combo[14][0][3] = true
 
 combo[14][1][0] = "ob_bile"
 combo[14][1][1] = "ob_shroom"
+
+// FRIED ALGAE
+combo[15][0][0] = "ob_fried_alg"
+combo[15][0][1] = "Fried Algae"
+combo[15][0][2] = false
+combo[15][0][3] = true
+
+combo[15][1][0] = "ob_bile"
+combo[15][1][1] = "ob_sw_alg"
+
+// FRIED WRAP
+combo[16][0][0] = "ob_fried_wrap"
+combo[16][0][1] = "Fried Wrap"
+combo[16][0][2] = false
+combo[16][0][3] = true
+
+combo[16][1][0] = "ob_eye_wrap"
+combo[16][1][1] = "ob_bile"
+
+// FRIED ALGAE WRAP
+combo[17][0][0] = "ob_fried_alg_wrap"
+combo[17][0][1] = "Fried Algae Wrap"
+combo[17][0][2] = false
+combo[17][0][3] = true
+
+combo[17][1][0] = "ob_fried_alg"
+combo[17][1][1] = "ob_eye"
+
+// MARINATED Wrap
+combo[18][0][0] = "ob_mar_eye"
+combo[18][0][1] = "Marinated Wrap"
+combo[18][0][2] = false
+combo[18][0][3] = true
+
+combo[18][1][0] = "ob_eye_wrap"
+combo[18][1][1] = "ob_blood"
+
+combo[18][2][0] = "ob_eye_wrap"
+combo[18][2][1] = "ob_bld_sc"
+
+combo[18][3][0] = "ob_eye_wrap"
+combo[18][3][1] = "ob_con_bld"
+
+// MOLD DINNER
+combo[19][0][0] = "ob_mold_dinner"
+combo[19][0][1] = "Mold Dinner"
+combo[19][0][2] = false
+combo[19][0][3] = true
+
+combo[19][1][0] = "ob_rot"
+combo[19][1][1] = "ob_fried_shroom"
+
+combo[19][2][0] = "ob_rot"
+combo[19][2][1] = "ob_fried_alg"
+
+// SICKLY SYRUP
+combo[20][0][0] = "ob_sick"
+combo[20][0][1] = "Sickly Syrup"
+combo[20][0][2] = false
+combo[20][0][3] = true
+
+combo[20][1][0] = "ob_rot"
+combo[20][1][1] = "ob_con_bld"
+
+// ROTTING EYE
+combo[21][0][0] = "ob_rot_eye"
+combo[21][0][1] = "Rotting Eye"
+combo[21][0][2] = false
+combo[21][0][3] = true
+
+combo[21][1][0] = "ob_rot"
+combo[21][1][1] = "ob_eye"
+
+// SHRIVELLING ALGAE
+combo[22][0][0] = "ob_shriv_alg"
+combo[22][0][1] = "Shrivelling Algae"
+combo[22][0][2] = false
+combo[22][0][3] = true
+
+combo[22][1][0] = "ob_rot"
+combo[22][1][1] = "ob_sw_alg"
+
+// BRAIN BURRITO
+combo[23][0][0] = "ob_brain_bur"
+combo[23][0][1] = "Brain Burrito"
+combo[23][0][2] = false
+combo[23][0][3] = true
+
+combo[23][1][0] = "ob_fried_alg"
+combo[23][1][1] = "ob_brain"
+
+// TOP CLOT
+combo[24][0][0] = "ob_top_clot"
+combo[24][0][1] = "Topped Clot"
+combo[24][0][2] = false
+combo[24][0][3] = true
+
+combo[24][1][0] = "ob_con_bld"
+combo[24][1][1] = "ob_fried_alg"
+
+// DRY SNACK
+combo[25][0][0] = "ob_dry_snack"
+combo[25][0][1] = "Dry Snack"
+combo[25][0][2] = false
+combo[25][0][3] = true
+
+combo[25][1][0] = "ob_fried_alg"
+combo[25][1][1] = "ob_sw_alg"

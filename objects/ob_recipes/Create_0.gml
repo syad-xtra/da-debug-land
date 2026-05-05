@@ -5,6 +5,6 @@ combo = ob_control.combo;
 cam_y = 0;
 glide = 0;
 cam = view_camera[0];
-room_height = 48 + (array_length(combo)-6)*64;
+room_height = 24 + (array_length(combo)-6)*63;
 setUIHeight(ob_null);
 setUIHeight(ob_mix_area);

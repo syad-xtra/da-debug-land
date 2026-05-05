@@ -2,6 +2,7 @@ if (x != x_pos and !leaving){x -= spd;}
 
 if (food_wanted = noone and x = x_pos and !leaving){
 	audio_play_sound(sn_complain, 0, 0);
+	callImage(x+sprite_width/2, y+30, 1);
 	while (food_wanted = noone and ordering = true){
 		food_pos = random(array_length(food_list));
 		show_debug_message(food_pos);

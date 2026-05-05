@@ -34,6 +34,7 @@ if point_in_rectangle(mouse_x, mouse_y, x, y, x + sprite_width, y + sprite_heigh
 	if (inst_count <= 16){
 	// patented original vivien sound
 	audio_play_sound(sn_select,1,0);
+	callImage(x+sprite_width/2,y+sprite_height/2,0);
 	instance_create_layer(random_range(mix_left, mix_right - 30), random_range(mix_top + 10, mix_bottom - 30), "Instances", create);
 	}
 }

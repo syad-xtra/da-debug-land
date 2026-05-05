@@ -1,0 +1,9 @@
+max_speed = 1.2;
+rotation = 30;
+image_angle = random_range(-rotation, rotation);
+image_xscale = 0.1;
+image_yscale = 0.1;
+image_alpha = 0.1;
+x_dir = random_range(-max_speed, max_speed);
+y_dir = random_range(-max_speed, max_speed);
+final_state = false;

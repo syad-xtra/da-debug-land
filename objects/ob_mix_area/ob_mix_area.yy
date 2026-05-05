@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "ob_mix_area",
   "spriteId": {
-    "name": "sp_mixing_area",
-    "path": "sprites/sp_mixing_area/sp_mixing_area.yy",
+    "name": "sp_button",
+    "path": "sprites/sp_button/sp_button.yy",
   },
   "solid": false,
   "visible": true,

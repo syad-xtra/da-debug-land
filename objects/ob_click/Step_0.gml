@@ -18,6 +18,7 @@ if selected_item = noone and mouse_check_button_pressed(mb_left) and hoverable !
 	// if i didnt do this game maker would pick up every instance of ob_selectable
 	selected_item = instance_nearest(mouse_x, mouse_y, select);
 	audio_play_sound(sn_select,1,0);
+	callImage(selected_item.x, selected_item.y, 0);
 }
 
 // checks if item is selected, if left is let go and gives a list of items colliding with the picked up item

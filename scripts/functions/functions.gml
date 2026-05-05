@@ -180,3 +180,15 @@ function positionArray(array, value){
 		if (array[i] = value){return i;}
 	}
 }
+
+
+function scaleGradual(spd, rate){
+	image_alpha += spd;
+	image_xscale += spd*rate;
+	image_yscale += spd*rate;
+}
+
+function callImage(fx, fy, index){
+	var inst = instance_create_layer(fx, fy, "visual_sound", ob_vis_effect);
+	inst.image_index = index;
+}
