@@ -10,17 +10,13 @@ if (room = rm_2){
 	setUIHeight(ob_null);
 	ob_recipe_book_grey.x = 5;
 	ob_recipe_book_grey.y = 34;
-	var unlock_num = 0;
-	for (var i = 0; i < array_length(combo); i++){
-		if (combo[i][0][2]){unlock_num++;}
-	}
 
 	if (rating < 1){
 		end_text = "You lost, lol";
 		game_ending = true;
 	}
 
-	if (rating >= 5 and unlock_num = array_length(combo)){
+	if (rating >= 5 and ob_recipe_book.unlock_number = max_num){
 		end_text = "You win, yay!";
 		game_ending = true;
 	}
