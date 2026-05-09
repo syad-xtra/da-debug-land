@@ -2,7 +2,7 @@
 
 if instance_exists(book){
 	if (book.show_text){
-		var text = string(book.unlock_number) + "/" + string(array_length(combo)-6);
+		var text = string(book.unlock_number) + "/" + string(ob_control.max_num);
 		var width = book.sprite_width/2;
 		var height = book.sprite_height/2;
 		smallCenteredText();

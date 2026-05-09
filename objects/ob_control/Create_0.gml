@@ -10,6 +10,7 @@ range_tmax = 3600;
 range_tmin = 2800;
 x_customer = 372;
 y_customer = 14;
+max_num = 0;
 window_set_cursor(cr_none);
 instance_create_layer(mouse_x, mouse_y, "Mouse_Layer", ob_cursor);
 
@@ -240,3 +241,14 @@ combo[25][0][3] = true
 
 combo[25][1][0] = "ob_fried_alg"
 combo[25][1][1] = "ob_sw_alg"
+
+// MISHEX
+combo[26][0][0] = "ob_mishex"
+combo[26][0][1] = "Mishex"
+combo[26][0][2] = false
+combo[26][0][3] = false
+
+
+for (var i = 0; i < array_length(combo); i++){
+	if (combo[i][0][3]){max_num++;}
+}

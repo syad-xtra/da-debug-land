@@ -3,6 +3,7 @@ var d_y = 24;
 draw_set_color(c_black);
 smallCenteredText();
 for (var i = 6; i < array_length(combo); i++){
+	if (!combo[i][0][3]){continue;}
 	var d_sprite = objectNameToSprite(combo[i][0][0]);
 	var c1_sprite = objectNameToSprite(combo[i][1][0]);
 	var c2_sprite = objectNameToSprite(combo[i][1][1]);

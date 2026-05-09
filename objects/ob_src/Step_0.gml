@@ -12,7 +12,9 @@ switch (src_type){
 		sprite_index = sp_brain_src;
 	break;
 	case 3:
-		create = ob_eye;
+		var mishex = random_range(0,50);
+		if (mishex < 2){create = ob_mishex;}
+		else{create = ob_eye;}
 		sprite_index = sp_eyes_src;
 	break;
 	case 4:
