@@ -13,9 +13,11 @@ if (food_wanted = noone and x = x_pos and !leaving){
 		}
 	}
 	food_wanted = string(food_wanted);
-	ob_control.alarm[0] = random_range(range_tmin, range_tmax);
-	if (range_tmax < range_max){range_tmax -= ob_control.difficulty;}
-	if (range_tmin < range_min){range_tmin -= ob_control.difficulty;}
+	var s_min = 0;
+	var s_max = 0;
+	if (ob_control.hard_mode){s_min = 1200; s_max = 1800;}
+	else{s_min = 2800; s_max = 3600;}
+	ob_control.alarm[0] = random_range(s_min, s_max);
 }
 
 if (leaving){x -= spd;}

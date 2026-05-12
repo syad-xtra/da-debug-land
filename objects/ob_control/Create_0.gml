@@ -3,14 +3,13 @@ rating = 3;
 end_text = "Placeholder";
 game_ending = false
 customer_mad = false;
-difficulty = 60;
-range_min = 600;
-range_max = 1200;
-range_tmax = 3600;
-range_tmin = 2800;
+hard_mode = false;
 x_customer = 372;
 y_customer = 14;
 max_num = 0;
+pop_up = false;
+mishex_easter_egg = true;
+recipes_unlocked = false;
 window_set_cursor(cr_none);
 instance_create_layer(mouse_x, mouse_y, "Mouse_Layer", ob_cursor);
 

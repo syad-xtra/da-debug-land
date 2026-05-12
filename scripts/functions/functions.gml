@@ -94,18 +94,6 @@ function indexToObject(list){
 }
 
 
-function smallCenteredText(){
-	draw_set_halign(fa_center);
-	draw_set_valign(fa_middle);
-	draw_set_font(fnt_small);
-}
-
-function largeCenteredText(){
-	draw_set_halign(fa_center);
-	draw_set_valign(fa_middle);
-	draw_set_font(fnt_large);
-}
-
 function objectNameToSprite(ob_name){
 	var result = asset_get_index(ob_name);
 	result = object_get_sprite(result);

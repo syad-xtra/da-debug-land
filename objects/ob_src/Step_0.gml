@@ -13,7 +13,7 @@ switch (src_type){
 	break;
 	case 3:
 		var mishex = random_range(0,50);
-		if (mishex < 2){create = ob_mishex;}
+		if (ob_control.mishex_easter_egg and mishex < 2){create = ob_mishex;}
 		else{create = ob_eye;}
 		sprite_index = sp_eyes_src;
 	break;

@@ -15,6 +15,7 @@ book = ob_recipe_book;
 customer = ob_customer;
 select = ob_selectable;
 txt_box = sp_text_box;
+button = ob_button;
 
 // lord help me i'm doing multi dimensional arrays again
 // im not bothering with the text function in this app

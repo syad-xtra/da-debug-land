@@ -10,13 +10,13 @@ for (var i = 6; i < array_length(combo); i++){
 	var gap = sprite_get_height(d_sprite) + 16;
 	var text = combo[i][0][1];
 	show_debug_message("Sprite height 1 for " + string(i) + " sprite:" + string(sprite_get_height(d_sprite)));
-	if !(combo[i][0][2]){
+	if (!combo[i][0][2] and !ob_control.recipes_unlocked){
 		d_sprite = sp_mystery_sprite;
 		text = "Unknown";}
 	show_debug_message("Sprite height 2 for " + string(i) + " sprite:" + string(sprite_get_height(d_sprite)));
 	draw_sprite(d_sprite, 0, x_origin, d_y);
 	draw_text(x_origin + sprite_get_width(d_sprite)/2, d_y + gap, text);
-	if (combo[i][0][2]){
+	if (combo[i][0][2] or ob_control.recipes_unlocked){
 		var c_x1 = x_origin + x_offset + sprite_get_width(d_sprite)*2;
 		var c_x2 = c_x1 + x_offset + sprite_get_width(c1_sprite)*2;
 		draw_text(c_x2 - (c_x1/1.85), d_y + gap/2, "=");
