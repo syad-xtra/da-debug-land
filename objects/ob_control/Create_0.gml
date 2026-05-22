@@ -1,6 +1,6 @@
 randomize();
 rating = 3;
-end_text = "Placeholder";
+end_id = 0;
 game_ending = false
 customer_mad = false;
 hard_mode = false;

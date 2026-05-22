@@ -14,12 +14,11 @@ if (room = rm_2){
 	ob_recipe_book_grey.y = 34;
 
 	if (rating < 1){
-		end_text = "You lost, lol";
 		game_ending = true;
 	}
 
 	if (rating >= 5 and ob_recipe_book.unlock_number = max_num){
-		end_text = "You win, yay!";
+		end_id = 1;
 		game_ending = true;
 	}
 

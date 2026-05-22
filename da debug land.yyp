@@ -3,6 +3,7 @@
   "resourceVersion": "1.6",
   "name": "da debug land",
   "resources": [
+    {"id":{"name":"sp_endings","path":"sprites/sp_endings/sp_endings.yy",},"order":2,},
     {"id":{"name":"sp_sliced_eye","path":"sprites/sp_sliced_eye/sp_sliced_eye.yy",},"order":23,},
     {"id":{"name":"sp_customer_normal","path":"sprites/sp_customer_normal/sp_customer_normal.yy",},"order":0,},
     {"id":{"name":"sp_at_brain","path":"sprites/sp_at_brain/sp_at_brain.yy",},"order":9,},
@@ -156,9 +157,9 @@
     {"roomId":{"name":"menu_scrn","path":"rooms/menu_scrn/menu_scrn.yy",},},
     {"roomId":{"name":"rm_2","path":"rooms/rm_2/rm_2.yy",},},
     {"roomId":{"name":"rm_3","path":"rooms/rm_3/rm_3.yy",},},
-    {"roomId":{"name":"rm_ending","path":"rooms/rm_ending/rm_ending.yy",},},
     {"roomId":{"name":"rm_1","path":"rooms/rm_1/rm_1.yy",},},
     {"roomId":{"name":"debug_pop_up_rm","path":"rooms/debug_pop_up_rm/debug_pop_up_rm.yy",},},
+    {"roomId":{"name":"rm_ending","path":"rooms/rm_ending/rm_ending.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
