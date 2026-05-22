@@ -24,7 +24,6 @@ if selected_item = noone and mouse_check_button_pressed(mb_left) and hoverable !
 // checks if item is selected, if left is let go and gives a list of items colliding with the picked up item
 // then if it collides, calls merge
 if selected_item != noone and mouse_check_button_released(mb_left) {
-	
 	selected_object = object_get_name(selected_item.object_index);
 	show_debug_message("selected item: " + selected_object);
 	selected_object =  asset_get_index(selected_object);
@@ -101,5 +100,6 @@ if (instance_exists(selected_item) and selected_item != noone){
 
 // if right click, erase that thang
 if (instance_exists(select) and mouse_check_button_pressed(mb_right) and hoverable != noone){
+	selected_item = noone;
 	instance_destroy(hoverable);
 }

@@ -2,8 +2,8 @@
   "resourceType": "GMOperaGXOptions",
   "resourceVersion": "1.0",
   "name": "operagx",
-  "option_operagx_version": "1.0.0.2",
-  "option_operagx_next_version": "1.0.0.3",
+  "option_operagx_version": "1.0.0.3",
+  "option_operagx_next_version": "1.0.0.4",
   "option_operagx_game_name": "Cibophilia - Gore Fine Dining",
   "option_operagx_interpolate_pixels": false,
   "option_operagx_scale": 0,
@@ -14,5 +14,5 @@
   "option_operagx_team_id": "21141e0d-8327-4de2-a8ae-8037ea63f3e3",
   "option_operagx_editUrl": "https://dev.gx.games/games/a673465f-5658-44bb-a2e5-dc15cd02bfec/details",
   "option_operagx_internalShareUrl": "https://gx.games/games/lise1v/cibophilia-gore-fine-dining/tracks/ba02adc9-ce4f-4270-90ee-821197381132/",
-  "option_operagx_publicShareUrl": "",
+  "option_operagx_publicShareUrl": "https://gx.games/games/lise1v/cibophilia-gore-fine-dining/",
 }
